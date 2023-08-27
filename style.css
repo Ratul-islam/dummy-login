@@ -1,0 +1,210 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section {
+    height: 100vh;
+    width: 100vw;
+    
+    display: grid;
+    place-content: center;
+    z-index: -999;
+    display: grid;
+}
+main {
+    height: 80vh;
+    width: 70vw;
+    background: #011434;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    animation: entry .9s 1 forwards;
+    border-radius: 10px;
+}
+main::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80vh;
+    width: 70vw;
+    filter: blur(10px);
+    background: linear-gradient(45deg, #ff000093, #ff7300, #7a7800, #1b6100, #00ffd5,#a1303081, #001475, #330c5c6c, #ff00c871, #ff00008e);
+    opacity: 0;
+    background-size: 200%;
+    transition: .5s ease-in-out;
+    z-index: -1;
+}
+main:hover:after {
+    animation: anime 3s infinite;
+    opacity: 1;
+}
+@keyframes anime {
+    0% {
+        background-position: 0 0;
+    }
+    25%{
+        background-position: 10% 50%;
+    }
+    50%{
+        background-position: 30% 70%;
+    }
+    75%{
+        background-position: 100% 0;
+    }
+}
+@keyframes entry {
+    0% {
+        margin-top: 10%;
+    }
+    100%{
+        margin-top: 0%;
+    }
+}
+body {
+    background: #011434; 
+}
+main>img {
+    min-height: 50px;
+    height: 50vh;
+    animation: entry .9s 1 forwards;
+}
+#texts {
+    position: absolute;
+    left: 10%;
+}
+#texts>h2 {
+    color: #fff;
+    font-weight: 100;
+    animation: entry .9s 1 forwards;
+    transition: .5s all;
+}
+
+#texts>h2:hover {
+    letter-spacing: 10px;
+    transition: .5s all;
+}
+#texts>h1 {
+    color: #52d7ff;
+    font-size: calc(min(60px,5vw,5rem));
+    font-weight: 500;
+    line-height: 90px;
+    transition: .5s all;
+    animation: entry .9s 1 forwards;
+}
+
+#texts>h1:hover {
+    letter-spacing: 30px;
+    transition: .5s all;
+}
+#texts>h3 {
+    color: #fff;
+    font-size: calc(min(40px,5vw,5rem));
+    font-weight: 500;
+    line-height: 40px;
+    animation: entry .9s 1 forwards;
+    transition: .5s all;
+}
+#texts>h3:hover {
+    letter-spacing: 20px;
+    transition: .5s all;
+}
+#texts>p {
+    color: #fffd;
+    font-size: calc(min(10px,5vw,5rem));
+    font-weight: 100;
+    line-height: 40px;
+    animation: entry .9s 1 forwards;
+    transition: .5s all;
+}
+#texts>p:hover {
+    letter-spacing: 10px;
+    transition: .5s all;
+}
+#texts>p>a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #52d7ff;
+    transition: .5s all;
+    animation: entry .9s 1 forwards;
+}
+#texts>button {
+    margin-top: 20px;
+    height: 30px;
+    width: 130px;
+    border-radius: 20px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #52d7ff;
+    transition: .4s all;
+    font-weight: 800;
+    cursor: pointer;
+    animation: entry .9s 1 forwards;
+}
+#texts>button:hover {
+    background: #52d7ff;
+    color: #011434;
+    width: 180px;
+    letter-spacing: 10px;
+    animation: entry .9s 1 forwards;
+}
+#texts {
+    transition: .1s linear;
+}
+
+.form {
+    height: 400px;
+    width: 300px;
+    color: #fff;
+    transform: rotateY(90DEG);
+    transition: .1s all;
+}
+.form>h1 {
+    margin: 20px 0px;
+    text-align: center;
+}
+form>p {
+    font-size: 13px;
+}
+.form>form>input {
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+    color: #fff;
+    font-weight: 800;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.288);
+}
+#sub_button {
+    height: 40px;
+    width: 140px;
+    font-size: 20px;
+    position: relative;
+    left: 50%;
+    margin-top: 10%;
+    transform: translateX(-50%);
+    background: none;
+    border-radius: 50px;
+    border: 2px solid #52d7ff;
+    color: #fff;
+    transition: .5s all;
+    cursor: pointer;
+}
+#sub_button:hover {
+    width: 220px;
+    letter-spacing: 20px;
+    background: #52d7ff;
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    transition: .5s all;
+}
